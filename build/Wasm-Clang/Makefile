@@ -92,159 +92,30 @@ OBJS_PRIMITIVES = \
 
 OBJS_SPECIALIZE = \
   softfloat_raiseFlags$(OBJ) \
-  s_f16UIToCommonNaN$(OBJ) \
-  s_commonNaNToF16UI$(OBJ) \
-  s_propagateNaNF16UI$(OBJ) \
-  s_f32UIToCommonNaN$(OBJ) \
-  s_commonNaNToF32UI$(OBJ) \
-  s_propagateNaNF32UI$(OBJ) \
   s_f64UIToCommonNaN$(OBJ) \
   s_commonNaNToF64UI$(OBJ) \
   s_propagateNaNF64UI$(OBJ) \
-  extF80M_isSignalingNaN$(OBJ) \
-  s_extF80UIToCommonNaN$(OBJ) \
-  s_commonNaNToExtF80UI$(OBJ) \
-  s_propagateNaNExtF80UI$(OBJ) \
-  f128M_isSignalingNaN$(OBJ) \
-  s_f128UIToCommonNaN$(OBJ) \
-  s_commonNaNToF128UI$(OBJ) \
-  s_propagateNaNF128UI$(OBJ) \
 
 OBJS_OTHERS = \
   s_roundToUI32$(OBJ) \
   s_roundToUI64$(OBJ) \
   s_roundToI32$(OBJ) \
   s_roundToI64$(OBJ) \
-  s_normSubnormalF16Sig$(OBJ) \
-  s_roundPackToF16$(OBJ) \
-  s_normRoundPackToF16$(OBJ) \
-  s_addMagsF16$(OBJ) \
-  s_subMagsF16$(OBJ) \
-  s_mulAddF16$(OBJ) \
-  s_normSubnormalF32Sig$(OBJ) \
-  s_roundPackToF32$(OBJ) \
-  s_normRoundPackToF32$(OBJ) \
-  s_addMagsF32$(OBJ) \
-  s_subMagsF32$(OBJ) \
-  s_mulAddF32$(OBJ) \
   s_normSubnormalF64Sig$(OBJ) \
   s_roundPackToF64$(OBJ) \
   s_normRoundPackToF64$(OBJ) \
   s_addMagsF64$(OBJ) \
   s_subMagsF64$(OBJ) \
   s_mulAddF64$(OBJ) \
-  s_normSubnormalExtF80Sig$(OBJ) \
-  s_roundPackToExtF80$(OBJ) \
-  s_normRoundPackToExtF80$(OBJ) \
-  s_addMagsExtF80$(OBJ) \
-  s_subMagsExtF80$(OBJ) \
-  s_normSubnormalF128Sig$(OBJ) \
-  s_roundPackToF128$(OBJ) \
-  s_normRoundPackToF128$(OBJ) \
-  s_addMagsF128$(OBJ) \
-  s_subMagsF128$(OBJ) \
-  s_mulAddF128$(OBJ) \
   softfloat_state$(OBJ) \
-  ui32_to_f16$(OBJ) \
-  ui32_to_f32$(OBJ) \
   ui32_to_f64$(OBJ) \
-  ui32_to_extF80$(OBJ) \
-  ui32_to_extF80M$(OBJ) \
-  ui32_to_f128$(OBJ) \
-  ui32_to_f128M$(OBJ) \
-  ui64_to_f16$(OBJ) \
-  ui64_to_f32$(OBJ) \
   ui64_to_f64$(OBJ) \
-  ui64_to_extF80$(OBJ) \
-  ui64_to_extF80M$(OBJ) \
-  ui64_to_f128$(OBJ) \
-  ui64_to_f128M$(OBJ) \
-  i32_to_f16$(OBJ) \
-  i32_to_f32$(OBJ) \
   i32_to_f64$(OBJ) \
-  i32_to_extF80$(OBJ) \
-  i32_to_extF80M$(OBJ) \
-  i32_to_f128$(OBJ) \
-  i32_to_f128M$(OBJ) \
-  i64_to_f16$(OBJ) \
-  i64_to_f32$(OBJ) \
   i64_to_f64$(OBJ) \
-  i64_to_extF80$(OBJ) \
-  i64_to_extF80M$(OBJ) \
-  i64_to_f128$(OBJ) \
-  i64_to_f128M$(OBJ) \
-  f16_to_ui32$(OBJ) \
-  f16_to_ui64$(OBJ) \
-  f16_to_i32$(OBJ) \
-  f16_to_i64$(OBJ) \
-  f16_to_ui32_r_minMag$(OBJ) \
-  f16_to_ui64_r_minMag$(OBJ) \
-  f16_to_i32_r_minMag$(OBJ) \
-  f16_to_i64_r_minMag$(OBJ) \
-  f16_to_f32$(OBJ) \
-  f16_to_f64$(OBJ) \
-  f16_to_extF80$(OBJ) \
-  f16_to_extF80M$(OBJ) \
-  f16_to_f128$(OBJ) \
-  f16_to_f128M$(OBJ) \
-  f16_roundToInt$(OBJ) \
-  f16_add$(OBJ) \
-  f16_sub$(OBJ) \
-  f16_mul$(OBJ) \
-  f16_mulAdd$(OBJ) \
-  f16_div$(OBJ) \
-  f16_rem$(OBJ) \
-  f16_sqrt$(OBJ) \
-  f16_eq$(OBJ) \
-  f16_le$(OBJ) \
-  f16_lt$(OBJ) \
-  f16_eq_signaling$(OBJ) \
-  f16_le_quiet$(OBJ) \
-  f16_lt_quiet$(OBJ) \
-  f16_isSignalingNaN$(OBJ) \
-  f32_to_ui32$(OBJ) \
-  f32_to_ui64$(OBJ) \
-  f32_to_i32$(OBJ) \
-  f32_to_i64$(OBJ) \
-  f32_to_ui32_r_minMag$(OBJ) \
-  f32_to_ui64_r_minMag$(OBJ) \
-  f32_to_i32_r_minMag$(OBJ) \
-  f32_to_i64_r_minMag$(OBJ) \
-  f32_to_f16$(OBJ) \
-  f32_to_f64$(OBJ) \
-  f32_to_extF80$(OBJ) \
-  f32_to_extF80M$(OBJ) \
-  f32_to_f128$(OBJ) \
-  f32_to_f128M$(OBJ) \
-  f32_roundToInt$(OBJ) \
-  f32_add$(OBJ) \
-  f32_sub$(OBJ) \
-  f32_mul$(OBJ) \
-  f32_mulAdd$(OBJ) \
-  f32_div$(OBJ) \
-  f32_rem$(OBJ) \
-  f32_sqrt$(OBJ) \
-  f32_eq$(OBJ) \
-  f32_le$(OBJ) \
-  f32_lt$(OBJ) \
-  f32_eq_signaling$(OBJ) \
-  f32_le_quiet$(OBJ) \
-  f32_lt_quiet$(OBJ) \
-  f32_isSignalingNaN$(OBJ) \
-  f64_to_ui32$(OBJ) \
   f64_to_ui64$(OBJ) \
-  f64_to_i32$(OBJ) \
   f64_to_i64$(OBJ) \
-  f64_to_ui32_r_minMag$(OBJ) \
   f64_to_ui64_r_minMag$(OBJ) \
-  f64_to_i32_r_minMag$(OBJ) \
   f64_to_i64_r_minMag$(OBJ) \
-  f64_to_f16$(OBJ) \
-  f64_to_f32$(OBJ) \
-  f64_to_extF80$(OBJ) \
-  f64_to_extF80M$(OBJ) \
-  f64_to_f128$(OBJ) \
-  f64_to_f128M$(OBJ) \
   f64_roundToInt$(OBJ) \
   f64_add$(OBJ) \
   f64_sub$(OBJ) \
@@ -260,110 +131,6 @@ OBJS_OTHERS = \
   f64_le_quiet$(OBJ) \
   f64_lt_quiet$(OBJ) \
   f64_isSignalingNaN$(OBJ) \
-  extF80_to_ui32$(OBJ) \
-  extF80_to_ui64$(OBJ) \
-  extF80_to_i32$(OBJ) \
-  extF80_to_i64$(OBJ) \
-  extF80_to_ui32_r_minMag$(OBJ) \
-  extF80_to_ui64_r_minMag$(OBJ) \
-  extF80_to_i32_r_minMag$(OBJ) \
-  extF80_to_i64_r_minMag$(OBJ) \
-  extF80_to_f16$(OBJ) \
-  extF80_to_f32$(OBJ) \
-  extF80_to_f64$(OBJ) \
-  extF80_to_f128$(OBJ) \
-  extF80_roundToInt$(OBJ) \
-  extF80_add$(OBJ) \
-  extF80_sub$(OBJ) \
-  extF80_mul$(OBJ) \
-  extF80_div$(OBJ) \
-  extF80_rem$(OBJ) \
-  extF80_sqrt$(OBJ) \
-  extF80_eq$(OBJ) \
-  extF80_le$(OBJ) \
-  extF80_lt$(OBJ) \
-  extF80_eq_signaling$(OBJ) \
-  extF80_le_quiet$(OBJ) \
-  extF80_lt_quiet$(OBJ) \
-  extF80_isSignalingNaN$(OBJ) \
-  extF80M_to_ui32$(OBJ) \
-  extF80M_to_ui64$(OBJ) \
-  extF80M_to_i32$(OBJ) \
-  extF80M_to_i64$(OBJ) \
-  extF80M_to_ui32_r_minMag$(OBJ) \
-  extF80M_to_ui64_r_minMag$(OBJ) \
-  extF80M_to_i32_r_minMag$(OBJ) \
-  extF80M_to_i64_r_minMag$(OBJ) \
-  extF80M_to_f16$(OBJ) \
-  extF80M_to_f32$(OBJ) \
-  extF80M_to_f64$(OBJ) \
-  extF80M_to_f128M$(OBJ) \
-  extF80M_roundToInt$(OBJ) \
-  extF80M_add$(OBJ) \
-  extF80M_sub$(OBJ) \
-  extF80M_mul$(OBJ) \
-  extF80M_div$(OBJ) \
-  extF80M_rem$(OBJ) \
-  extF80M_sqrt$(OBJ) \
-  extF80M_eq$(OBJ) \
-  extF80M_le$(OBJ) \
-  extF80M_lt$(OBJ) \
-  extF80M_eq_signaling$(OBJ) \
-  extF80M_le_quiet$(OBJ) \
-  extF80M_lt_quiet$(OBJ) \
-  f128_to_ui32$(OBJ) \
-  f128_to_ui64$(OBJ) \
-  f128_to_i32$(OBJ) \
-  f128_to_i64$(OBJ) \
-  f128_to_ui32_r_minMag$(OBJ) \
-  f128_to_ui64_r_minMag$(OBJ) \
-  f128_to_i32_r_minMag$(OBJ) \
-  f128_to_i64_r_minMag$(OBJ) \
-  f128_to_f16$(OBJ) \
-  f128_to_f32$(OBJ) \
-  f128_to_extF80$(OBJ) \
-  f128_to_f64$(OBJ) \
-  f128_roundToInt$(OBJ) \
-  f128_add$(OBJ) \
-  f128_sub$(OBJ) \
-  f128_mul$(OBJ) \
-  f128_mulAdd$(OBJ) \
-  f128_div$(OBJ) \
-  f128_rem$(OBJ) \
-  f128_sqrt$(OBJ) \
-  f128_eq$(OBJ) \
-  f128_le$(OBJ) \
-  f128_lt$(OBJ) \
-  f128_eq_signaling$(OBJ) \
-  f128_le_quiet$(OBJ) \
-  f128_lt_quiet$(OBJ) \
-  f128_isSignalingNaN$(OBJ) \
-  f128M_to_ui32$(OBJ) \
-  f128M_to_ui64$(OBJ) \
-  f128M_to_i32$(OBJ) \
-  f128M_to_i64$(OBJ) \
-  f128M_to_ui32_r_minMag$(OBJ) \
-  f128M_to_ui64_r_minMag$(OBJ) \
-  f128M_to_i32_r_minMag$(OBJ) \
-  f128M_to_i64_r_minMag$(OBJ) \
-  f128M_to_f16$(OBJ) \
-  f128M_to_f32$(OBJ) \
-  f128M_to_extF80M$(OBJ) \
-  f128M_to_f64$(OBJ) \
-  f128M_roundToInt$(OBJ) \
-  f128M_add$(OBJ) \
-  f128M_sub$(OBJ) \
-  f128M_mul$(OBJ) \
-  f128M_mulAdd$(OBJ) \
-  f128M_div$(OBJ) \
-  f128M_rem$(OBJ) \
-  f128M_sqrt$(OBJ) \
-  f128M_eq$(OBJ) \
-  f128M_le$(OBJ) \
-  f128M_lt$(OBJ) \
-  f128M_eq_signaling$(OBJ) \
-  f128M_le_quiet$(OBJ) \
-  f128M_lt_quiet$(OBJ) \
 
 OBJS_ALL = $(OBJS_PRIMITIVES) $(OBJS_SPECIALIZE) $(OBJS_OTHERS)
 
