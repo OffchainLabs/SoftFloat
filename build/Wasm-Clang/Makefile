@@ -41,10 +41,11 @@ SOFTFLOAT_OPTS ?= \
   -DSOFTFLOAT_ROUND_ODD -DINLINE_LEVEL=5 -DSOFTFLOAT_FAST_DIV32TO16 \
   -DSOFTFLOAT_FAST_DIV64TO32
 
+CLANG ?= clang
 DELETE = rm -f
 C_INCLUDES = -I. -I$(SOURCE_DIR)/$(SPECIALIZE_TYPE) -I$(SOURCE_DIR)/include
 COMPILE_C = \
-  clang -c -Werror-implicit-function-declaration -DSOFTFLOAT_FAST_INT64 \
+  $(CLANG) -c -Werror-implicit-function-declaration -DSOFTFLOAT_FAST_INT64 \
     -target wasm32-unknown-unknown --sysroot /opt/wasi-sdk/wasi-sysroot \
     $(SOFTFLOAT_OPTS) $(C_INCLUDES) -O2 -o $@
 MAKELIB = ar crs $@
